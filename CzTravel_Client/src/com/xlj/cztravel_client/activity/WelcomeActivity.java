@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
+import android.view.WindowManager;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.animation.Animation.AnimationListener;
@@ -24,13 +25,16 @@ public class WelcomeActivity extends BaseActivity
 		//setContentView(R.layout.welcomeactivity);		
 		mView = View.inflate(this, R.layout.welcomeactivity, null);
 		setContentView(mView);
+				
+		getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, 
+				WindowManager.LayoutParams.FLAG_FULLSCREEN);
 		
 		startAnim();
 	}
 	
 	private void startAnim()
 	{
-		mStartAnim = new AlphaAnimation(0.3f, 1.0f);
+		mStartAnim = new AlphaAnimation(0.5f, 1.0f);
 		mStartAnim.setDuration(2000);
 		mView.startAnimation(mStartAnim);
 		
