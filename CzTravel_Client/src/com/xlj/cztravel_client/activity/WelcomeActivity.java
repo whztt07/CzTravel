@@ -22,13 +22,13 @@ public class WelcomeActivity extends BaseActivity
 		super.onCreate(savedInstanceState);
 		this.requestWindowFeature(Window.FEATURE_NO_TITLE);
 		
+		//getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, 
+		//		WindowManager.LayoutParams.FLAG_FULLSCREEN);
+		
 		//setContentView(R.layout.welcomeactivity);		
 		mView = View.inflate(this, R.layout.welcomeactivity, null);
 		setContentView(mView);
 				
-		getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, 
-				WindowManager.LayoutParams.FLAG_FULLSCREEN);
-		
 		startAnim();
 	}
 	
